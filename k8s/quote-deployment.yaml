@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quote-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quote
+  template:
+    metadata:
+      labels:
+        app: quote
+    spec:
+      containers:
+      - name: quote
+        image: quote-service:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 4000
