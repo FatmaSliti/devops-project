@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline (Build & Push Only)
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +19,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      # Build + push greeting-service
       - name: Build & push greeting-service image
         run: |
           docker build -t fatmasliti/greeting-service:latest ./greeting-service
           docker push fatmasliti/greeting-service:latest
 
+      # Build + push quote-service
       - name: Build & push quote-service image
         run: |
           docker build -t fatmasliti/quote-service:latest ./quote-service
