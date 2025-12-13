@@ -190,7 +190,7 @@ Documenté toutes les étapes avec captures d’écran.
 
 ### En Fin 
 
-Le chemin vers la maîtrise est long , mais chaque pas compte ✨
+DevOps est un état d’esprit, pas seulement un ensemble d’outils ⚙️✨
 
 
 
