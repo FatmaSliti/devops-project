@@ -23,7 +23,7 @@ Exigences :
 
 ---
 
-# 1. Architecture Globale
+# 1. 
 
 Mon projet comprend :  
 - **Greeting Service** (Node.js)  
